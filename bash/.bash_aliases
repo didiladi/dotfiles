@@ -28,3 +28,6 @@ alias top="htop"
 
 # get my ip
 alias myip="curl http://ipecho.net/plain; echo"
+
+# nvim is the new kid in town and replaces vim
+alias vim="nvim"
