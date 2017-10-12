@@ -30,4 +30,4 @@ alias top="htop"
 alias myip="curl http://ipecho.net/plain; echo"
 
 # nvim is the new kid in town and replaces vim
-alias vim="neovim"
+alias vim="nvim"
