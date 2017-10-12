@@ -1,30 +1,45 @@
 
-syntax on
-set nocompatible
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Stolen from: http://erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+" Setting up Vundle - the vim plugin bundler
+    let iCanHazVundle=1
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme) 
+        echo "Installing Vundle.."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/vundle
+        let iCanHazVundle=0
+    endif
+    set nocompatible              " be iMproved, required
+    filetype off                  " required
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#begin()
+    Plugin 'VundleVim/Vundle.vim'
+    "Add your bundles here
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
+"    Plugin 'Syntastic' "uber awesome syntax and errors highlighter
+"    Plugin 'altercation/vim-colors-solarized' "T-H-E colorscheme
+"    Plugin 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal 
+    "...All your other bundles...
+    if iCanHazVundle == 0
+        echo "Installing Vundles, please ignore key map error messages"
+        echo ""
+        :PluginInstall
+    endif
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+    call vundle#end() 
+    "must be last
+    filetype plugin indent on " load filetype plugins/indent settings
+    colorscheme solarized
+    syntax on                      " enable syntax
+ 
+" Vundle brief help
 "
-" Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache

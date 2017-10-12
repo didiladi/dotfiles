@@ -46,5 +46,10 @@ cp -f ./i3/config ~/.config/i3/config
 cp -f ./vim/.vimrc ~/.vimrc
 cp -f ./git/.gitconfig ~/.gitconfig
 
+# configure nvim
+mkdir ~/.config/nvim/
+ln -s ~/.vimrc ~/.config/nvim/init.vim
+
+
 # run tuxedo.sh (make it work on i3)
 
