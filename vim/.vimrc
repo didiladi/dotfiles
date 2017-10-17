@@ -8,6 +8,7 @@
         echo ""
         silent !mkdir -p ~/.vim/bundle
         silent !git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/vundle
+	silent !git clone git://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
         let iCanHazVundle=0
     endif
     set nocompatible              " be iMproved, required
