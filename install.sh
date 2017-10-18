@@ -19,7 +19,7 @@ ln -s Downloads/ downloads
 ln -s Videos/ videos
 ln -s Pictures/ pictures
 
-# remap capslock to esc
+# remap capslock to esc TODO doesn't work right now!
 xmodmap -e "remove Lock = Caps_Lock"
 xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 xmodmap -pke > ~/.xmodmap
@@ -53,6 +53,16 @@ cp -f ./git/.gitconfig ~/.gitconfig
 mkdir ~/.config/nvim/
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
+# reload bash (now nvm is in path)
+source ~/.bashrc
 
-# run tuxedo.sh (make it work on i3)
+# install all the node related things
+nvm install node
+npm install -g typescript
+npm install -g tslint
+
+# TODO install font
+# TODO install java stack (+ intellij)
+# TODO run tuxedo.sh (make it work on i3)
+# TODO find out why solarized color scheme does not work (see .vimrc)
 
