@@ -8,10 +8,13 @@ sudo apt-get install python3-pip jupyter-core jupyter-notebook
 pip3 install jupyter wheel pandas scipy pylint xlrd sklearn
 
 # install non-essential stuff
-sudo apt-get install gnome-icon-theme
+sudo apt-get install gnome-icon-theme inkscape
 
 # software to remove
 sudo apt-get remove nautilus
+
+# create dirs
+mkdir -p ~/scripts
 
 # create symbolic links
 ln -s Documents/ documents
@@ -23,6 +26,24 @@ ln -s Pictures/ pictures
 xmodmap -e "remove Lock = Caps_Lock"
 xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 xmodmap -pke > ~/.xmodmap
+
+# install fonts used by nvim
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
+curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+curl -fLo "Roboto Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf
+fc-cache -fv
+
+# install z.sh
+cd ~/scripts
+curl -fLo "z.sh" https://github.com/rupa/z/raw/master/z.sh
+chmod +x z.sh
+cd ~
 
 # get node version manager (run nvm install node)
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
@@ -58,11 +79,16 @@ source ~/.bashrc
 
 # install all the node related things
 nvm install node
+# TODO source ~/.bashrc ?
 npm install -g typescript
 npm install -g tslint
 
-# TODO install font
+# TODO terminal profile
 # TODO install java stack (+ intellij)
 # TODO run tuxedo.sh (make it work on i3)
 # TODO find out why solarized color scheme does not work (see .vimrc)
+# TODO slack
+# TODO ghetto-skype
+# TODO crontab
+# TODO rust
 

@@ -17,12 +17,12 @@
     call vundle#begin()
     Plugin 'VundleVim/Vundle.vim'
     "Add your bundles here
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ryanoasis/vim-devicons'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
+    Plugin 'ctrlpvim/ctrlp.vim'
+    Plugin 'vim-syntastic/syntastic'
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'ryanoasis/vim-devicons'
 "    Plugin 'Syntastic' "uber awesome syntax and errors highlighter
 "    Plugin 'altercation/vim-colors-solarized' "T-H-E colorscheme
 "    Plugin 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal 
@@ -37,7 +37,7 @@ Plugin 'ryanoasis/vim-devicons'
     "must be last
     filetype plugin indent on " load filetype plugins/indent settings
     colorscheme solarized
-    syntax on                      " enable syntax
+ on                      " enable syntax
  
 " Vundle brief help
 "
@@ -71,8 +71,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
-"let g:airline_powerline_fonts = 1
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+let g:airline_powerline_fonts = 1
 
 set relativenumber number
 " exit insert, dd line, enter insert
