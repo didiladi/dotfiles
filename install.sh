@@ -22,6 +22,9 @@ ln -s Downloads/ downloads
 ln -s Videos/ videos
 ln -s Pictures/ pictures
 
+# fix sh (should point to bash instead of dash)
+sudo ln -fs bash /bin/sh
+
 # remap capslock to esc TODO doesn't work right now!
 xmodmap -e "remove Lock = Caps_Lock"
 xmodmap -e "keycode 66 = Escape NoSymbol Escape"
