@@ -156,6 +156,14 @@ function extract {
 fi
 }
 
+note() {
+  if [ ! -z "$1" ]; then
+    echo $(date +"%Y%m%d-%H%M%S") $@  >> $HOME/notes/TempNotes.wiki
+  else
+    echo $(date +"%Y%m%d-%H%M%S") "$(cat)"  >> $HOME/notes/TempNotes.wiki
+  fi
+}
+
 export PATH=$PATH:~/scripts
 
 export NVM_DIR="$HOME/.nvm"

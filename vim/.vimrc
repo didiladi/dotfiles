@@ -23,8 +23,9 @@
     Plugin 'vim-syntastic/syntastic'
     Plugin 'scrooloose/nerdtree'
     Plugin 'ryanoasis/vim-devicons'
+    Plugin 'vimwiki/vimwiki'
+    Plugin 'altercation/vim-colors-solarized'
 "    Plugin 'Syntastic' "uber awesome syntax and errors highlighter
-"    Plugin 'altercation/vim-colors-solarized' "T-H-E colorscheme
 "    Plugin 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal 
     "...All your other bundles...
     if iCanHazVundle == 0
@@ -36,8 +37,8 @@
     call vundle#end() 
     "must be last
     filetype plugin indent on " load filetype plugins/indent settings
-    colorscheme solarized
- on                      " enable syntax
+    "colorscheme solarized
+    syntax on                      " enable syntax
  
 " Vundle brief help
 "

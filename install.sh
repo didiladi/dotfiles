@@ -15,6 +15,7 @@ sudo apt-get remove nautilus
 
 # create dirs
 mkdir -p ~/scripts
+mkdir -p ~/notes
 
 # create symbolic links
 ln -s Documents/ documents
@@ -89,7 +90,6 @@ npm install -g tslint
 # TODO terminal profile
 # TODO install java stack (+ intellij)
 # TODO run tuxedo.sh (make it work on i3)
-# TODO find out why solarized color scheme does not work (see .vimrc)
 # TODO slack
 # TODO ghetto-skype
 # TODO crontab
