@@ -8,7 +8,7 @@ sudo apt-get install python3-pip jupyter-core jupyter-notebook
 pip3 install jupyter wheel pandas scipy pylint xlrd sklearn
 
 # install non-essential stuff
-sudo apt-get install gnome-icon-theme inkscape
+sudo apt-get install gnome-icon-theme inkscape hardinfo
 
 # software to remove
 sudo apt-get remove nautilus
@@ -67,6 +67,8 @@ sudo apt-get update
 # install the packages from the other repos
 sudo apt-get install yarn code
 
+sh ./software/docker.sh
+
 # copy files from this git repo
 cp -f ./bash/.bash_aliases ~/.bash_aliases
 cp -f ./bash/.bashrc ~/.bashrc
@@ -87,6 +89,7 @@ nvm install node
 npm install -g typescript
 npm install -g tslint
 
+# TODO check current path
 # TODO terminal profile
 # TODO install java stack (+ intellij)
 # TODO run tuxedo.sh (make it work on i3)
