@@ -26,11 +26,6 @@ ln -s Pictures/ pictures
 # fix sh (should point to bash instead of dash)
 sudo ln -fs bash /bin/sh
 
-# remap capslock to esc TODO doesn't work right now!
-xmodmap -e "remove Lock = Caps_Lock"
-xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-xmodmap -pke > ~/.xmodmap
-
 # install fonts used by nvim
 git clone https://github.com/powerline/fonts.git --depth=1
 cd fonts
@@ -75,6 +70,10 @@ cp -f ./bash/.bashrc ~/.bashrc
 cp -f ./i3/config ~/.config/i3/config
 cp -f ./vim/.vimrc ~/.vimrc
 cp -f ./git/.gitconfig ~/.gitconfig
+cp -f ./xmodmap/.xmodmap ~/.xmodmap
+
+# remap capslock to esc
+xmodmap ~/.xmodmap
 
 # configure nvim
 mkdir ~/.config/nvim/
