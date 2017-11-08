@@ -4,8 +4,8 @@
 sudo apt-get install i3 thunar vim neovim thunderbird
 
 # install python
-sudo apt-get install python3-pip jupyter-core jupyter-notebook
-pip3 install jupyter wheel pandas scipy pylint xlrd sklearn
+sudo apt-get install python3-pip jupyter-core jupyter-notebook python3-tk
+pip3 install jupyter wheel pandas scipy pylint xlrd sklearn matplotlib
 
 # install non-essential stuff
 sudo apt-get install gnome-icon-theme inkscape hardinfo

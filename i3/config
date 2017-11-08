@@ -97,11 +97,11 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Name the workspaces
-set $tag1 "1: www"
+set $tag1 "1: www && mail"
 set $tag2 "2: terminal"
 set $tag3 "3: code"
 set $tag4 "4: demo"
-set $tag5 "5: mail"
+set $tag5 "5: code"
 set $tag6 "6: code"
 set $tag7 "7: code review"
 set $tag8 "8"
@@ -147,7 +147,8 @@ exec --no-startup-id i3-msg '1: www; exec /usr/bin/firefox'
 # assign clients to specific workspaces
 assign [class="^Code$"] → workspace $tag3 # visual studio code
 assign [class="^Electron$"] → workspace $tag4 # Electron
-assign [class="^Thunderbird$"] → workspace $tag5 # thunderbird
+assign [class="^Thunderbird$"] → workspace $tag1 # thunderbird
+assign [class="^Firefox$"] → workspace $tag1 # firefox
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
