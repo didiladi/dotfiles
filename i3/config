@@ -97,7 +97,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Name the workspaces
-set $tag1 "1: www && mail"
+set $tag1 "1: www/mail"
 set $tag2 "2: terminal"
 set $tag3 "3: code"
 set $tag4 "4: demo"
