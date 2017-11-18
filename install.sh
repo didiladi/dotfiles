@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # install the essentials
-sudo apt-get install i3 thunar vim neovim thunderbird
+sudo apt-get install i3 thunar vim neovim thunderbird shutter
 
 # install python
-sudo apt-get install python3-pip jupyter-core jupyter-notebook python3-tk
-pip3 install jupyter wheel pandas scipy pylint xlrd sklearn matplotlib
+sudo apt-get install python3-pip jupyter-core jupyter-notebook python3-tk python3-scrapy
+pip3 install jupyter wheel pandas scipy pylint xlrd sklearn matplotlib scrapy
 
 # install non-essential stuff
 sudo apt-get install gnome-icon-theme inkscape hardinfo
