@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install the essentials
-sudo apt-get install i3 thunar vim neovim thunderbird shutter
+sudo apt-get install i3 thunar vim neovim thunderbird shutter gimp
 
 # install python
 sudo apt-get install python3-pip jupyter-core jupyter-notebook python3-tk python3-scrapy
