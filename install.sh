@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# get the current directory
+dir=$(pwd)
+
 # install the essentials
 sudo apt-get install i3 thunar vim neovim thunderbird shutter gimp
 
@@ -39,10 +42,11 @@ curl -fLo "Roboto Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd
 fc-cache -fv
 
 # install z.sh
-cd ~/scripts
+mkdir ~/scripts/z
+cd ~/scripts/z
 curl -fLo "z.sh" https://github.com/rupa/z/raw/master/z.sh
 chmod +x z.sh
-cd ~
+cd $dir
 
 # get node version manager (run nvm install node)
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
@@ -84,11 +88,10 @@ source ~/.bashrc
 
 # install all the node related things
 nvm install node
-# TODO source ~/.bashrc ?
+source ~/.bashrc
 npm install -g typescript
 npm install -g tslint
 
-# TODO check current path
 # TODO terminal profile
 # TODO install java stack (+ intellij)
 # TODO run tuxedo.sh (make it work on i3)
