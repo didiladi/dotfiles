@@ -4,14 +4,44 @@
 dir=$(pwd)
 
 # install the essentials
-sudo apt-get install i3 thunar vim neovim thunderbird shutter gimp
+sudo apt-get install \
+	i3 \
+	thunar \
+	vim \
+	neovim \
+	thunderbird \
+	shutter
 
 # install python
-sudo apt-get install python3-pip jupyter-core jupyter-notebook python3-tk python3-scrapy
-pip3 install jupyter wheel pandas scipy pylint xlrd sklearn matplotlib scrapy tensorflow tensorflow-utils
+sudo apt-get install \
+	python3-pip \
+	jupyter-core \
+	jupyter-notebook \
+	python3-tk \
+	python3-scrapy
+
+pip3 install \
+	jupyter \
+	wheel \
+	pandas \
+	scipy \
+	pylint \
+	xlrd \
+	sklearn \
+	matplotlib \
+	scrapy \
+	tensorflow \
+	tensorflow-utils
+
+# install rust
+curl https://sh.rustup.rs -sSf | sh
 
 # install non-essential stuff
-sudo apt-get install gnome-icon-theme inkscape hardinfo
+sudo apt-get install \
+	gnome-icon-theme \
+	inkscape \
+	hardinfo \
+	gimp
 
 # software to remove
 sudo apt-get remove nautilus
@@ -87,5 +117,4 @@ npm install -g tslint
 # TODO slack
 # TODO ghetto-skype
 # TODO crontab
-# TODO rust
 
