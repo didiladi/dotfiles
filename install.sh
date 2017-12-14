@@ -51,22 +51,11 @@ cd $dir
 # get node version manager (run nvm install node)
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
 
-# install yarn repo
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-
-# install visual studio code repo
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-
-# run apt-get update
-sudo apt-get update
-
-# install the packages from the other repos
-sudo apt-get install yarn code
-
-sh ./software/docker.sh
+# install additional software from other repos
+for f in ./software/*.sh
+do
+	sh $f
+done
 
 # copy files from this git repo
 cp -f ./bash/.bash_aliases ~/.bash_aliases
