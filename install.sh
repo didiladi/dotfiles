@@ -10,7 +10,8 @@ sudo apt-get install \
 	vim \
 	neovim \
 	thunderbird \
-	shutter
+	shutter \
+	jshon
 
 # install python
 sudo apt-get install \
