@@ -42,7 +42,10 @@ sudo apt-get install \
 	gnome-icon-theme \
 	inkscape \
 	hardinfo \
-	gimp
+	gimp \
+	virtualbox \
+	virtualbox-qt \
+	virtualbox-dkms 
 
 # software to remove
 sudo apt-get remove nautilus
