@@ -41,9 +41,12 @@ source ~/.bashrc
 rustup update stable
 rustup update nightly
 
+# https://github.com/rust-lang-nursery/rls
 rustup component add rls-preview --toolchain nightly
 rustup component add rust-analysis --toolchain nightly
 rustup component add rust-src --toolchain nightly
+
+cargo install racer
 
 # install non-essential stuff
 sudo apt-get install \
