@@ -13,6 +13,12 @@ sudo apt-get install \
 	shutter \
 	jshon
 
+# install java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java9-installer
+sudo apt-get install oracle-java9-set-default
+
 # install python
 sudo apt-get install \
 	python3-pip \
@@ -127,7 +133,7 @@ npm install -g typescript
 npm install -g tslint
 
 # TODO terminal profile
-# TODO install java stack (+ intellij)
+# TODO install intellij
 # TODO run tuxedo.sh (make it work on i3)
 # TODO slack
 # TODO ghetto-skype
