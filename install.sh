@@ -11,7 +11,8 @@ sudo apt-get install \
 	neovim \
 	thunderbird \
 	shutter \
-	jshon
+	jshon \
+	libssl-dev
 
 # install java
 sudo add-apt-repository ppa:webupd8team/java
