@@ -40,7 +40,9 @@ pip3 install \
 	scrapy \
 	tensorflow \
 	tensorflow-utils \
-	opencv-python
+	opencv-python \
+	keras \
+	scikit-image
 
 # install rust
 curl https://sh.rustup.rs -sSf | sh
