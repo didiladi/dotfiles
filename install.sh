@@ -36,6 +36,14 @@ pip3 install \
 
 # install rust
 curl https://sh.rustup.rs -sSf | sh
+source ~/.bashrc
+
+rustup update stable
+rustup update nightly
+
+rustup component add rls-preview --toolchain nightly
+rustup component add rust-analysis --toolchain nightly
+rustup component add rust-src --toolchain nightly
 
 # install non-essential stuff
 sudo apt-get install \
