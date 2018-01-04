@@ -42,7 +42,8 @@ pip3 install \
 	tensorflow-utils \
 	opencv-python \
 	keras \
-	scikit-image
+	scikit-image \
+	cython
 
 # install rust
 curl https://sh.rustup.rs -sSf | sh
