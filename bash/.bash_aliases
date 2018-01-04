@@ -31,6 +31,3 @@ alias myip="curl http://ipecho.net/plain; echo"
 
 # nvim is the new kid in town and replaces vim
 alias vim="nvim"
-
-# python 3.5 is the default
-alias python="python3.5"
