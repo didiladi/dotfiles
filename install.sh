@@ -69,7 +69,8 @@ sudo apt-get install \
 	gimp \
 	virtualbox \
 	virtualbox-qt \
-	virtualbox-dkms 
+	virtualbox-dkms \
+	pythobn-autopep8
 
 # software to remove
 sudo apt-get remove nautilus
