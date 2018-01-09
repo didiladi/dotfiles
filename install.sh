@@ -43,7 +43,9 @@ pip3 install \
 	opencv-python \
 	keras \
 	scikit-image \
-	cython
+	cython \
+	h5py \
+	autopep8
 
 # install rust
 curl https://sh.rustup.rs -sSf | sh
