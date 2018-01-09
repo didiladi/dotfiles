@@ -70,7 +70,7 @@ sudo apt-get install \
 	virtualbox \
 	virtualbox-qt \
 	virtualbox-dkms \
-	pythobn-autopep8
+	python-autopep8
 
 # software to remove
 sudo apt-get remove nautilus
