@@ -12,7 +12,8 @@ sudo apt-get install \
 	thunderbird \
 	shutter \
 	jshon \
-	libssl-dev
+	libssl-dev \
+	apache2-utils
 
 # install java
 sudo add-apt-repository ppa:webupd8team/java
