@@ -15,6 +15,10 @@ sudo apt-get install \
 	libssl-dev \
 	apache2-utils
 
+# install git lfs:
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+
 # install java
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
