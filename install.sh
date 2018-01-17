@@ -145,9 +145,9 @@ nvm install node
 source ~/.bashrc
 npm install -g typescript
 npm install -g tslint
+npm install -g ionic
 
 # TODO terminal profile
-# TODO install intellij
 # TODO run tuxedo.sh (make it work on i3)
 # TODO slack
 # TODO ghetto-skype
