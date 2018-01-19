@@ -31,3 +31,5 @@ alias myip="curl http://ipecho.net/plain; echo"
 
 # nvim is the new kid in town and replaces vim
 alias vim="nvim"
+
+alias idea="nohup intellij-idea-community &>/dev/null &"

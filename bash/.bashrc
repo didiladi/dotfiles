@@ -165,6 +165,7 @@ note() {
 }
 
 export PATH=$PATH:~/scripts
+export CHROME_BIN=/usr/bin/chromium-browser
 
 . ~/scripts/z/z.sh
 
