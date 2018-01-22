@@ -149,6 +149,7 @@ assign [class="^Code$"] → workspace $tag3 # visual studio code
 assign [class="^Electron$"] → workspace $tag4 # Electron
 assign [class="^Thunderbird$"] → workspace $tag1 # thunderbird
 assign [class="^Firefox$"] → workspace $tag1 # firefox
+assign [class="^jetbrains-idea-ce$"] → workspace $tag3 # Intellij
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
