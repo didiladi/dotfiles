@@ -146,6 +146,7 @@ source ~/.bashrc
 npm install -g typescript
 npm install -g tslint
 npm install -g ionic
+npm install -g cordova
 
 # TODO terminal profile
 # TODO run tuxedo.sh (make it work on i3)
