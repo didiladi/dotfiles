@@ -13,7 +13,8 @@ sudo apt-get install \
 	shutter \
 	jshon \
 	libssl-dev \
-	apache2-utils
+	apache2-utils \
+	cmake
 
 # install git lfs:
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
@@ -93,6 +94,10 @@ ln -s Pictures/ pictures
 
 # fix sh (should point to bash instead of dash)
 sudo ln -fs bash /bin/sh
+
+# increase watch limit inotify
+sudo echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
+sudo sysctl -p --system
 
 # install fonts used by nvim
 git clone https://github.com/powerline/fonts.git --depth=1
