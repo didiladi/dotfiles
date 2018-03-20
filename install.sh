@@ -127,6 +127,9 @@ do
 	sh $f
 done
 
+# docker cleanup script:
+cp -f ./software/docker/*.sh ~/scripts/
+
 # copy files from this git repo
 cp -f ./bash/.bash_aliases ~/.bash_aliases
 cp -f ./bash/.bashrc ~/.bashrc
