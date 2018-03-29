@@ -16,6 +16,10 @@ sudo apt-get install \
 	apache2-utils \
 	cmake
 
+# install snaps:
+sudo snap install \
+	hugo
+
 # install git lfs:
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt-get install git-lfs
