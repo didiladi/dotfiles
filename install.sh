@@ -57,7 +57,8 @@ pip3 install \
 	cython \
 	h5py \
 	autopep8 \
-	rope
+	rope \
+	aenum
 
 # install rust
 curl https://sh.rustup.rs -sSf | sh
