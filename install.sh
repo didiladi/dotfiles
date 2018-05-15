@@ -56,7 +56,8 @@ pip3 install \
 	scikit-image \
 	cython \
 	h5py \
-	autopep8
+	autopep8 \
+	rope
 
 # install rust
 curl https://sh.rustup.rs -sSf | sh
