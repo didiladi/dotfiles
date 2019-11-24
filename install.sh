@@ -14,7 +14,8 @@ sudo apt-get install \
 	jshon \
 	libssl-dev \
 	apache2-utils \
-	cmake
+	cmake \
+	zsh
 
 # install snaps:
 sudo snap install \
@@ -60,6 +61,9 @@ pip3 install \
 	rope \
 	aenum
 
+#install ohmyzsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # install rust
 curl https://sh.rustup.rs -sSf | sh
 source ~/.bashrc
@@ -98,8 +102,8 @@ ln -s Downloads/ downloads
 ln -s Videos/ videos
 ln -s Pictures/ pictures
 
-# fix sh (should point to bash instead of dash)
-sudo ln -fs bash /bin/sh
+# fix sh (should point to zsh instead of dash)
+sudo ln -fs zsh /bin/sh
 
 # increase watch limit inotify
 sudo echo "fs.inotify.max_user_watches = 524288" >> /etc/sysctl.conf
@@ -116,6 +120,16 @@ cd ~/.local/share/fonts
 curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 curl -fLo "Roboto Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf
 fc-cache -fv
+
+# install terminal fonts:
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+mkdir ~/.fonts/
+mv PowerlineSymbols.otf ~/.fonts/
+mkdir -p .config/fontconfig/conf.d #if directory doesn't exists
+fc-cache -vf ~/.fonts/
+
+mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d
 
 # install z.sh
 mkdir ~/scripts/z
@@ -139,6 +153,7 @@ cp -f ./software/docker/*.sh ~/scripts/
 # copy files from this git repo
 cp -f ./bash/.bash_aliases ~/.bash_aliases
 cp -f ./bash/.bashrc ~/.bashrc
+cp -f ./zsh/.zshrc ~/.zshrc
 cp -f ./i3/config ~/.config/i3/config
 cp -f ./vim/.vimrc ~/.vimrc
 cp -f ./git/.gitconfig ~/.gitconfig
