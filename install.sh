@@ -64,6 +64,9 @@ pip3 install \
 #install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Set zsh as the default shell
+chsh -s /bin/zsh
+
 # install rust
 curl https://sh.rustup.rs -sSf | sh
 source ~/.bashrc
