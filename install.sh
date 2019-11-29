@@ -156,7 +156,7 @@ cp -f ./software/docker/*.sh ~/scripts/
 # copy files from this git repo
 cp -f ./bash/.bash_aliases ~/.bash_aliases
 cp -f ./bash/.bashrc ~/.bashrc
-cp -f ./zsh/.zshrc ~/.zshrc
+cp -f ./zsh/zshrc ~/.zshrc
 cp -f ./i3/config ~/.config/i3/config
 cp -f ./vim/.vimrc ~/.vimrc
 cp -f ./git/.gitconfig ~/.gitconfig
