@@ -18,7 +18,8 @@ sudo apt-get install \
 
 # install snaps:
 sudo snap install \
-	hugo
+	hugo \
+	curl
 
 # install git lfs:
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
