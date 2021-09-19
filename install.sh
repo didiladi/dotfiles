@@ -97,6 +97,7 @@ sudo apt-get remove nautilus
 # create dirs
 mkdir -p ~/scripts
 mkdir -p ~/notes
+mkdir -p ~/workspace
 
 # create symbolic links
 ln -s Documents/ documents
