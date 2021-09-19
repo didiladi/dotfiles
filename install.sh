@@ -10,7 +10,6 @@ sudo apt-get install \
 	vim \
 	neovim \
 	thunderbird \
-	shutter \
 	jshon \
 	libssl-dev \
 	apache2-utils \
